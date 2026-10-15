@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Expertise Limited | PR, Media & Personal Branding, London</title>
+  <meta name="description" content="Global Expertise is a London studio for PR, media relations and personal branding. Strategic communications and reputation building for professionals and growing businesses.">
+  <meta property="og:title" content="Global Expertise Limited">
+  <meta property="og:description" content="PR, media and personal branding from London. Strategic communications and reputation building.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo-full.png">
+  <meta name="theme-color" content="#14203a">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f3ec;
+      --paper-alt: #eee8dc;
+      --ink: #141a28;
+      --ink-soft: #4b5262;
+      --navy: #14203a;
+      --navy-2: #1d2c4c;
+      --gold: #b8913f;
+      --gold-text: #86651f;
+      --rule: #d8cfbe;
+      --rule-dark: rgba(255, 255, 255, 0.16);
+
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+      --gutter: clamp(16px, 4vw, 48px);
+      --max: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+    .skip {
+      position: absolute; left: -9999px; top: 0;
+      background: var(--navy); color: #fff; padding: 10px 16px; z-index: 100;
+    }
+    .skip:focus { left: 16px; top: 16px; }
+
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-text);
+      margin: 0;
+    }
+
+    /* ---------- Masthead ---------- */
+    .dateline {
+      border-bottom: 1px solid var(--rule);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .dateline .wrap {
+      display: flex; justify-content: space-between; gap: 16px;
+      padding-top: 9px; padding-bottom: 9px;
+    }
+    .dateline span:last-child { text-align: right; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(246, 243, 236, 0.94);
+      backdrop-filter: saturate(1.2) blur(8px);
+      -webkit-backdrop-filter: saturate(1.2) blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px; gap: 24px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand img { height: 40px; width: auto; }
+    .brand-name {
+      font-family: var(--serif); font-size: 21px; font-weight: 500;
+      letter-spacing: 0.01em; line-height: 1; color: var(--navy);
+    }
+    .brand-name small {
+      display: block; margin-top: 5px;
+      font-family: var(--sans); font-size: 9.5px; font-weight: 600;
+      letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-text);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a {
+      text-decoration: none; font-size: 15px; font-weight: 500; color: var(--ink);
+      background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+      transition: background-size .25s ease;
+      padding-bottom: 2px;
+    }
+    .nav-links a:hover { background-size: 100% 1px; }
+    .nav-links .nav-cta {
+      background: var(--navy); color: #fff; padding: 10px 18px; border-radius: 2px;
+    }
+    .nav-links .nav-cta:hover { background: var(--navy-2); }
+
+    .menu-btn {
+      display: none; background: none; border: 1px solid var(--rule); border-radius: 2px;
+      font: 500 14px var(--sans); color: var(--ink); padding: 8px 14px; cursor: pointer;
+    }
+
+    @media (max-width: 860px) {
+      .menu-btn { display: block; }
+      .nav-links {
+        display: none; position: absolute; left: 0; right: 0; top: 100%;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: var(--paper); border-bottom: 1px solid var(--rule);
+        padding: 8px var(--gutter) 20px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-top: 1px solid var(--rule); }
+      .nav-links li:first-child { border-top: 0; }
+      .nav-links a { display: block; padding: 14px 0; background: none; }
+      .nav-links .nav-cta { margin-top: 12px; text-align: center; padding: 14px; }
+      .dateline span:last-child { display: none; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: clamp(56px, 9vw, 120px) 0 clamp(56px, 8vw, 104px); border-bottom: 1px solid var(--rule); }
+    .hero-grid {
+      display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 48px 64px; align-items: end;
+    }
+    .hero h1 {
+      grid-column: 1 / -1;
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(48px, 9.2vw, 132px);
+      line-height: 0.96; letter-spacing: -0.025em;
+      margin: 18px 0 0; color: var(--navy);
+    }
+    .hero h1 em { font-style: italic; font-weight: 300; color: var(--ink); }
+    .lede { font-size: clamp(18px, 1.6vw, 21px); line-height: 1.55; max-width: 34em; margin: 0 0 32px; color: var(--ink); }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      font: 500 16px var(--sans); text-decoration: none; border-radius: 2px;
+    }
+    .btn-primary { background: var(--navy); color: #fff; padding: 15px 24px; }
+    .btn-primary:hover { background: var(--navy-2); }
+    .btn-text { color: var(--navy); border-bottom: 1px solid var(--navy); padding: 4px 0; border-radius: 0; }
+    .btn-text:hover { color: var(--gold-text); border-color: var(--gold-text); }
+    .arrow { transition: transform .2s ease; }
+    .btn:hover .arrow { transform: translateX(3px); }
+
+    .contents { border-top: 2px solid var(--navy); padding-top: 14px; }
+    .contents ol { list-style: none; margin: 10px 0 0; padding: 0; }
+    .contents li { border-bottom: 1px solid var(--rule); }
+    .contents a {
+      display: flex; gap: 14px; padding: 10px 0; text-decoration: none; font-size: 15px;
+    }
+    .contents a span { font-variant-numeric: tabular-nums; color: var(--gold-text); font-weight: 600; font-size: 13px; padding-top: 2px; }
+    .contents a:hover { color: var(--gold-text); }
+
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .contents { display: none; }
+    }
+
+    /* ---------- Sections ---------- */
+    .section { padding: clamp(64px, 9vw, 120px) 0; border-bottom: 1px solid var(--rule); }
+    .section.alt { background: var(--paper-alt); }
+
+    .section-head {
+      display: grid; grid-template-columns: 120px minmax(0, 1fr) minmax(0, 0.9fr);
+      gap: 24px 48px; align-items: baseline; margin-bottom: clamp(40px, 6vw, 72px);
+    }
+    .section-head .num {
+      font-family: var(--serif); font-size: 15px; color: var(--gold-text);
+      border-top: 1px solid var(--gold); padding-top: 10px; align-self: start;
+      font-variant-numeric: tabular-nums;
+    }
+    .section-head h2 {
+      font-family: var(--serif); font-weight: 400; color: var(--navy);
+      font-size: clamp(36px, 5vw, 60px); line-height: 1.02; letter-spacing: -0.02em; margin: 0;
+    }
+    .section-head p { margin: 0; color: var(--ink-soft); font-size: 18px; max-width: 30em; }
+
+    @media (max-width: 860px) {
+      .section-head { grid-template-columns: 1fr; gap: 16px; }
+      .section-head .num { width: 72px; }
+    }
+
+    /* Services */
+    .services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 64px; }
+    .service { border-top: 1px solid var(--ink); padding: 28px 0 48px; }
+    .service-top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+    .service h3 {
+      font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 2.6vw, 34px);
+      line-height: 1.1; letter-spacing: -0.01em; margin: 0; color: var(--navy);
+    }
+    .service .idx { font-family: var(--serif); font-style: italic; color: var(--gold-text); font-size: 18px; }
+    .service p { margin: 16px 0 20px; max-width: 32em; }
+    .includes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .includes li {
+      font-size: 13.5px; color: var(--ink-soft);
+      border: 1px solid var(--rule); padding: 4px 10px; border-radius: 2px; background: rgba(255,255,255,0.4);
+    }
+    @media (max-width: 760px) { .services { grid-template-columns: 1fr; } }
+
+    /* Audience */
+    .audience { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 48px; }
+    .audience article { border-left: 1px solid var(--rule); padding-left: 24px; }
+    .audience h3 {
+      font-family: var(--serif); font-weight: 500; font-size: 24px; line-height: 1.2;
+      margin: 0 0 12px; color: var(--navy);
+    }
+    .audience p { margin: 0; color: var(--ink-soft); }
+    @media (max-width: 860px) { .audience { grid-template-columns: 1fr; } }
+
+    /* Process */
+    .steps {
+      list-style: none; margin: 0; padding: 0; counter-reset: step;
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
+    }
+    .steps li { counter-increment: step; padding: 0 28px 0 0; position: relative; }
+    .steps li::before {
+      content: "Step " counter(step);
+      display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold-text); padding-bottom: 14px; margin-bottom: 20px; border-bottom: 1px solid var(--ink);
+    }
+    .steps h3 { font-family: var(--serif); font-weight: 500; font-size: 26px; margin: 0 0 10px; color: var(--navy); }
+    .steps p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+    @media (max-width: 960px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 0; } }
+    @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } .steps li { padding-right: 0; } }
+
+    /* Statement */
+    .statement { background: var(--navy); color: #e9e6df; padding: clamp(72px, 10vw, 136px) 0; }
+    .statement .eyebrow { color: var(--gold); }
+    .statement blockquote {
+      margin: 22px 0 0; font-family: var(--serif); font-weight: 300;
+      font-size: clamp(34px, 5.4vw, 72px); line-height: 1.06; letter-spacing: -0.02em; color: #fff;
+      max-width: 15em;
+    }
+    .statement blockquote em { color: var(--gold); font-style: italic; }
+    .statement-cols {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 64px;
+      margin-top: clamp(40px, 6vw, 72px); padding-top: 32px; border-top: 1px solid var(--rule-dark);
+      max-width: 940px;
+    }
+    .statement-cols p { margin: 0; color: #c9ccd6; }
+    .statement-cols strong { color: #fff; font-weight: 600; }
+    @media (max-width: 760px) { .statement-cols { grid-template-columns: 1fr; } }
+
+    /* Founders */
+    .founders { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; }
+    .founder figure { margin: 0 0 28px; }
+    .founder img {
+      width: 100%; max-width: 360px; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
+      filter: grayscale(0.15) contrast(1.02);
+    }
+    .founder .role { margin: 0 0 6px; }
+    .founder h3 {
+      font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 3.4vw, 44px);
+      line-height: 1.05; letter-spacing: -0.015em; margin: 0 0 18px; color: var(--navy);
+    }
+    .founder > p { margin: 0 0 24px; max-width: 34em; }
+    .facts { margin: 0 0 24px; border-top: 1px solid var(--rule); }
+    .facts div { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+    .facts dt { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); padding-top: 3px; }
+    .facts dd { margin: 0; font-size: 15.5px; }
+    .facts dd span { display: block; }
+    @media (max-width: 860px) { .founders { grid-template-columns: 1fr; gap: 72px; } }
+    @media (max-width: 420px) { .facts div { grid-template-columns: 1fr; gap: 4px; } }
+
+    /* FAQ */
+    .faq { max-width: 860px; margin-left: auto; }
+    .faq details { border-top: 1px solid var(--ink); }
+    .faq details:last-child { border-bottom: 1px solid var(--ink); }
+    .faq summary {
+      list-style: none; cursor: pointer; padding: 22px 48px 22px 0; position: relative;
+      font-family: var(--serif); font-size: clamp(21px, 2.2vw, 26px); color: var(--navy); line-height: 1.25;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: ""; position: absolute; right: 6px; top: 50%; width: 12px; height: 12px; margin-top: -9px;
+      border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink);
+      transform: rotate(45deg); transition: transform .2s ease;
+    }
+    .faq details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
+    .faq details p { margin: 0 0 24px; max-width: 40em; color: var(--ink-soft); }
+
+    /* Contact */
+    .contact { padding: clamp(72px, 10vw, 136px) 0; }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px 80px; align-items: start; }
+    .contact h2 {
+      font-family: var(--serif); font-weight: 400; color: var(--navy);
+      font-size: clamp(40px, 6vw, 80px); line-height: 1; letter-spacing: -0.025em; margin: 18px 0 24px;
+    }
+    .contact h2 em { font-weight: 300; }
+    .contact-intro p { margin: 0 0 12px; max-width: 30em; font-size: 18px; }
+    .contact-intro .small { color: var(--ink-soft); font-size: 15px; }
+
+    .channels { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--navy); }
+    .channels li { border-bottom: 1px solid var(--rule); }
+    .channels a {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: center;
+      padding: 20px 0; text-decoration: none;
+    }
+    .channels .label { font-family: var(--serif); font-size: 24px; color: var(--navy); line-height: 1.2; }
+    .channels .meta { grid-column: 1; font-size: 14px; color: var(--ink-soft); }
+    .channels .go {
+      grid-row: 1 / span 2; grid-column: 2; width: 44px; height: 44px; border: 1px solid var(--rule);
+      display: grid; place-items: center; border-radius: 50%; transition: background .2s, border-color .2s, color .2s;
+    }
+    .channels a:hover .go { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .channels a:hover .label { color: var(--gold-text); }
+    .channels .static { padding: 20px 0; }
+    @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    /* Footer */
+    .site-footer { background: var(--navy); color: #c9ccd6; padding: 56px 0 40px; font-size: 14px; }
+    .footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; align-items: center; padding-bottom: 32px; border-bottom: 1px solid var(--rule-dark); }
+    .footer-brand { display: flex; align-items: center; gap: 14px; }
+    .footer-brand img { height: 44px; width: auto; filter: brightness(0) invert(1); opacity: 0.92; }
+    .footer-brand span { font-family: var(--serif); font-size: 22px; color: #fff; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 28px; list-style: none; margin: 0; padding: 0; }
+    .footer-links a { text-decoration: none; color: #e9e6df; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 24px; color: #9aa1b2; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="dateline" aria-hidden="true">
+    <div class="wrap">
+      <span>London, United Kingdom</span>
+      <span>PR &middot; Media &middot; Personal branding</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Global Expertise Limited, home">
+        <img src="assets/logo-mark.png" alt="" width="128" height="96">
+        <span class="brand-name">Global Expertise<small>Limited</small></span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approach">How we work</a></li>
+        <li><a href="#founders">Founders</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="nav-cta" href="#contact">Get in touch</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <p class="eyebrow" style="grid-column: 1 / -1;">Global positioning through PR, media and personal branding</p>
+        <h1>Your reputation,<br><em>on the record.</em></h1>
+        <div>
+          <p class="lede">Global Expertise is a London studio for PR, media relations and personal branding. We help professionals and growing businesses work out what they should be known for, then put it in front of the people who matter.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Start a conversation <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <a class="btn btn-text" href="#services">See what we do</a>
+          </div>
+        </div>
+        <nav class="contents" aria-label="On this page">
+          <p class="eyebrow">On this page</p>
+          <ol>
+            <li><a href="#services"><span>01</span>What we do</a></li>
+            <li><a href="#clients"><span>02</span>Who we work with</a></li>
+            <li><a href="#approach"><span>03</span>How we work</a></li>
+            <li><a href="#founders"><span>04</span>The founders</a></li>
+            <li><a href="#contact"><span>05</span>Contact</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="num">01</span>
+          <h2>What we do</h2>
+          <p>Four kinds of work that are usually stronger together. In the first conversation we'll tell you which ones you actually need, and which you don't.</p>
+        </header>
+
+        <div class="services">
+          <article class="service">
+            <div class="service-top"><h3>PR &amp; media relations</h3><span class="idx">i.</span></div>
+            <p>We find the stories in your work that editors, journalists and podcast hosts will want to run, and pitch them to the right people with the right angle. When a request comes in, you're ready for it.</p>
+            <ul class="includes">
+              <li>Story development</li><li>Press releases</li><li>Media outreach</li><li>Interview preparation</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="service-top"><h3>Personal branding</h3><span class="idx">ii.</span></div>
+            <p>Your LinkedIn profile, your bio, your speaker page and the way you introduce yourself should all tell the same story. We write that story once, properly, and make every version of it match.</p>
+            <ul class="includes">
+              <li>Positioning</li><li>LinkedIn profile</li><li>Short and long bios</li><li>Content direction</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="service-top"><h3>Strategic communications</h3><span class="idx">iii.</span></div>
+            <p>Launches, announcements, new hires, difficult news. We plan what gets said, who says it and in what order, so the message lands the way you meant it.</p>
+            <ul class="includes">
+              <li>Messaging framework</li><li>Announcement plans</li><li>Content calendar</li><li>Spokesperson notes</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="service-top"><h3>Reputation building</h3><span class="idx">iv.</span></div>
+            <p>The long game. A steady record of articles, appearances, speaking slots and recognition that builds over months, so anyone who looks you up finds substance.</p>
+            <ul class="includes">
+              <li>Thought-leadership articles</li><li>Awards and speaking submissions</li><li>Industry events</li><li>Progress reports</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audience -->
+    <section class="section alt" id="clients">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="num">02</span>
+          <h2>Who we work with</h2>
+          <p>People and companies who are good at what they do, and whose public profile hasn't caught up yet.</p>
+        </header>
+
+        <div class="audience">
+          <article>
+            <h3>Founders and business owners</h3>
+            <p>You've built something worth talking about but have no time to talk about it. We give the business a clear public voice and make sure the founder behind it is visible too.</p>
+          </article>
+          <article>
+            <h3>Professionals building an international profile</h3>
+            <p>Specialists, consultants and executives who need their standing in the field to be documented and easy to find: published work, media mentions, speaking and recognition.</p>
+          </article>
+          <article>
+            <h3>Businesses serving international communities</h3>
+            <p>Firms and organisations in the UK whose clients come from many countries. We work in English and Romanian and understand how to speak to more than one audience at once.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="approach">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="num">03</span>
+          <h2>How we work</h2>
+          <p>A written plan before any publicity, and nothing goes out under your name without your sign-off.</p>
+        </header>
+
+        <ol class="steps">
+          <li>
+            <h3>Listen</h3>
+            <p>A first conversation about your work, your goals and where you want to be seen. We ask a lot of questions.</p>
+          </li>
+          <li>
+            <h3>Audit</h3>
+            <p>We review everything that already exists about you online and in print: what's strong, what's missing, what's out of date.</p>
+          </li>
+          <li>
+            <h3>Plan</h3>
+            <p>A short written plan with priorities, channels and a realistic timeline. You approve it before we start.</p>
+          </li>
+          <li>
+            <h3>Build</h3>
+            <p>We do the work, report back on what happened, and adjust. Reputation compounds, so we think in months.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <section class="statement" aria-labelledby="statement-label">
+      <div class="wrap">
+        <p class="eyebrow" id="statement-label">Why us</p>
+        <blockquote>A good reputation is <em>evidence</em> that other people can find.</blockquote>
+        <div class="statement-cols">
+          <p><strong>From law,</strong> we bring a habit of building a case: gathering proof, presenting it clearly and leaving nothing a sceptical reader could pick apart.</p>
+          <p><strong>From client service,</strong> we bring the commercial side: knowing what clients need to hear, how they decide, and how to keep a relationship going for years.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founders -->
+    <section class="section" id="founders">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="num">04</span>
+          <h2>The founders</h2>
+          <p>Global Expertise is run by its two co-founders. You'll work with them directly, not with a junior account team.</p>
+        </header>
+
+        <div class="founders">
+          <article class="founder">
+            <figure><img src="assets/liuba-cosciuc.jpg" alt="Portrait of Liuba Cosciuc" width="400" height="500" loading="lazy"></figure>
+            <p class="eyebrow role">Co-Founder</p>
+            <h3>Liuba Cosciuc</h3>
+            <p>Liuba's background is in law. She works in UK immigration, supporting Global Talent visa applications from the first eligibility assessment through to submission. That work is about building a strong, well-evidenced case for someone's standing in their field, and it's the same discipline she brings to reputation work.</p>
+            <dl class="facts">
+              <div><dt>Focus</dt><dd>Positioning, evidence and written communications</dd></div>
+              <div><dt>Education</dt><dd><span>LL.M International Law, Distinction, The University of Law</span><span>LLB Law, Anglia Ruskin University</span></dd></div>
+              <div><dt>Based</dt><dd>London</dd></div>
+            </dl>
+            <a class="btn btn-text" href="https://www.linkedin.com/in/liuba-cosciuc-972945219/" target="_blank" rel="noopener">Liuba on LinkedIn <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="founder">
+            <figure><img src="assets/maria-gorbatii.jpg" alt="Portrait of Maria Gorbatii" width="480" height="600" loading="lazy"></figure>
+            <p class="eyebrow role">Co-Founder</p>
+            <h3>Maria Gorbatii</h3>
+            <p>Maria has nine years of experience in accounting and taxation, seven of them in sales and marketing. As a branch manager she runs client relationships, business development, social media and content for a UK financial services firm, and she knows what it takes to win a client's trust and keep it.</p>
+            <dl class="facts">
+              <div><dt>Focus</dt><dd>Client relationships, digital and social media marketing</dd></div>
+              <div><dt>Education</dt><dd><span>BA (Hons) Global Business and Entrepreneurship, Oxford Brookes University (in progress)</span><span>Diploma in Business Administration, Regent College London</span></dd></div>
+              <div><dt>Based</dt><dd>United Kingdom</dd></div>
+            </dl>
+            <a class="btn btn-text" href="https://www.linkedin.com/in/maria-gorbatii-7817402b6/" target="_blank" rel="noopener">Maria on LinkedIn <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt" id="faq">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="num">&mdash;</span>
+          <h2>Questions people ask first</h2>
+          <p>If yours isn't here, ask us directly.</p>
+        </header>
+
+        <div class="faq">
+          <details>
+            <summary>Can you guarantee press coverage?</summary>
+            <p>No, and you should be wary of anyone who does. Editors decide what they publish. What we can promise is the preparation: a story worth telling, pitched to people who cover your subject, with full visibility of who we contacted and what came back.</p>
+          </details>
+          <details>
+            <summary>Do you work with individuals, or only with companies?</summary>
+            <p>Both. Personal branding is half of what we do, and for many small businesses the founder's profile and the company's profile are the same project.</p>
+          </details>
+          <details>
+            <summary>Which languages do you work in?</summary>
+            <p>English and Romanian. That makes us a good fit for businesses and professionals who need to reach UK audiences and Romanian-speaking audiences at the same time.</p>
+          </details>
+          <details>
+            <summary>Where are you based?</summary>
+            <p>London. We meet clients in person in London and by video call everywhere else.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-intro">
+          <p class="eyebrow">05 &middot; Contact</p>
+          <h2>Tell us what you want to be <em>known for.</em></h2>
+          <p>Send a short note about who you are and what you're working on. One of the founders will reply to you personally.</p>
+          <p class="small">The quickest way to reach us right now is LinkedIn.</p>
+        </div>
+
+        <!-- Add an email address and phone number here once the company domain is set up. -->
+        <ul class="channels">
+          <li>
+            <a href="https://www.linkedin.com/company/global-expertise-limited/" target="_blank" rel="noopener">
+              <span class="label">Global Expertise on LinkedIn</span>
+              <span class="meta">Company page &middot; send us a message</span>
+              <span class="go" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/liuba-cosciuc-972945219/" target="_blank" rel="noopener">
+              <span class="label">Liuba Cosciuc</span>
+              <span class="meta">Co-Founder &middot; LinkedIn</span>
+              <span class="go" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/maria-gorbatii-7817402b6/" target="_blank" rel="noopener">
+              <span class="label">Maria Gorbatii</span>
+              <span class="meta">Co-Founder &middot; LinkedIn</span>
+              <span class="go" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li class="static">
+            <span class="label" style="font-family: var(--serif); font-size: 24px; color: var(--navy);">London, United Kingdom</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo-mark.png" alt="" width="128" height="96">
+          <span>Global Expertise Limited</span>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#approach">How we work</a></li>
+          <li><a href="#founders">Founders</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/global-expertise-limited/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Global Expertise Limited. London, United Kingdom.</span>
+        <span>PR, media and personal branding.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.menu-btn');
+      var links = document.getElementById('nav-links');
+      if (!btn || !links) return;
+      function setOpen(open) {
+        links.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.textContent = open ? 'Close' : 'Menu';
+      }
+      btn.addEventListener('click', function () { setOpen(!links.classList.contains('open')); });
+      links.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    })();
+  </script>
+</body>
+</html>
